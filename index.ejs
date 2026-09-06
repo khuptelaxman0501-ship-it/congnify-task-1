@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+</head>
+<body>
+    <h1> User Information Form</h1>
+    <form action="/submit" method="POST">
+    <label for ="name"> Name: </label>
+    <input type ="text" id="name" name="name" required>
+    <br><br>
+    <label for="email" >Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" cols="30"></textarea>
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+<% if (submitted) {%>
+    <hr>
+    <h2>Form Submitted successfully!</h2>
+    <p>
+        <strong>Name:</strong>
+        <%=name %>
+
+    </p>
+    <p>
+        <strong>email: </strong>
+        <%=email %>
+
+    </p>
+    <p>
+        <strong>Message:</strong>
+        <%=message%>
+    </p>
+<%} %>
+</body>
+</html>                                                                             
